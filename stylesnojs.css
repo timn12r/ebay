@@ -1,0 +1,126 @@
+:root {
+    font-family:sans-serif;
+    margin: 1%;
+    --lightgray: #f5f5f5;
+    --recycleblue: #8dddff;
+    --hovercolor: #4ecaff;
+}
+.icon {
+    width: 40px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    text-align: center;
+}
+.container {
+    background-color: var(--recycleblue);
+    border-radius: 10px;
+    padding: 15px;
+}
+.content {
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+.head-img {
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
+.column.left {
+    width: 25%;
+    background-color: var(--lightgray);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 5px;
+    text-align: center;
+}
+.column.left.blank {
+    background-color: white;
+    width: 25%;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 5px;
+    text-align: center;
+}
+.column.right {
+    width: 75%;
+    background-color: var(--lightgray);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 25px;
+}
+.column.right p {
+    text-align: left;
+}
+.gradebox {
+    border-radius: 50%;
+    background-color: var(--lightgray);
+    padding: 5px 30px;
+    text-align: center;
+    width: max-content;
+}
+.grid {
+    display: grid;
+    justify-content: stretch;
+    padding: 10px;
+}
+.grid > div {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--lightgray);
+    border-radius: 10px;
+    margin: 5px;
+}
+.grid.square {
+    align-items: center;
+    justify-content: center;
+}
+.grid > div img {
+    padding-right: 15px;
+    float: left;
+    max-width: 9%;
+}
+.gridblocks {
+    display: grid;
+    justify-content: stretch;
+    padding: 10px;
+}
+.gridblocks > div {
+    display: block;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--lightgray);
+    border-radius: 10px;
+    margin: 5px;
+}
+.gridblocks > div img {
+    max-height: 100px;
+
+}
+@media screen and (min-width: 800px) {
+    .grid {grid-template-columns: repeat(2, 1fr);}
+    .gridblocks {grid-template-columns: repeat(3, 1fr);}
+    
+}
+@media screen and (max-width: 800px) {
+    .column.left, .column.right, .column.left.blank {
+        width: auto;
+        text-align: center;
+    }
+    .row {
+        display: block;
+    }
+}
